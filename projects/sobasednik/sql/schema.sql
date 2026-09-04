@@ -1,25 +1,25 @@
--- Схема БД для Собаседника (guru.qahacking.ru)
+-- Схема БД для Собаседника (guru.qahacking.ru) — MySQL
 -- Таблицы: products, users, carts
 
 CREATE TABLE products (
-    id INTEGER PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name TEXT NOT NULL,
-    price INTEGER NOT NULL,
-    stock INTEGER NOT NULL,
+    price INT NOT NULL,
+    stock INT NOT NULL,
     badge TEXT
 );
 
 CREATE TABLE users (
-    id INTEGER PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name TEXT NOT NULL,
     email TEXT NOT NULL
 );
 
 CREATE TABLE carts (
-    id INTEGER PRIMARY KEY,
-    user_id INTEGER NOT NULL,
-    product_id INTEGER NOT NULL,
-    quantity INTEGER NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );

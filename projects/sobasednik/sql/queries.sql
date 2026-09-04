@@ -1,5 +1,5 @@
 -- SQL-запросы: Собаседник (guru.qahacking.ru)
--- Стенд: SQLite (локально: sqlite3 shop.db < schema.sql && sqlite3 shop.db < seed.sql)
+-- Стенд: MySQL
 -- Всего 7 запросов: WHERE, JOIN + WHERE, ORDER BY + LIMIT, LIKE, BETWEEN, GROUP BY + COUNT, LEFT JOIN
 
 -- Q1: Товары «Нет в наличии» (проверка BR-01)
